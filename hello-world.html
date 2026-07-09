@@ -1,182 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --ink: #f7f2e8;
-      --muted: #b9c0c7;
-      --glass: rgba(12, 18, 28, 0.72);
-      --line: rgba(255, 255, 255, 0.18);
-      --teal: #3ee7c9;
-      --rose: #ff6f91;
-      --gold: #ffd166;
-      --navy: #08111f;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & Github</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --ink: #f7f2e8;
+            --muted: #b9c0c7;
+            --glass: rgba(12, 18, 28, 0.72);
+            --line: rgba(255, 255, 255, 0.18);
+            --teal: #3ee7c9;
+            --rose: #ff6f91;
+            --gold: #ffd166;
+            --navy: #08111f;
+        }
 
-    * {
-      box-sizing: border-box;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 18% 22%, rgba(62, 231, 201, 0.28), transparent 28rem),
-        radial-gradient(circle at 78% 18%, rgba(255, 111, 145, 0.26), transparent 24rem),
-        linear-gradient(135deg, #08111f 0%, #141726 45%, #261827 100%);
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 18% 22%, rgba(62, 231, 201, 0.28), transparent 28rem),
+                radial-gradient(circle at 78% 18%, rgba(255, 111, 145, 0.26), transparent 24rem),
+                linear-gradient(135deg, #08111f 0%, #141726 45%, #261827 100%);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-      background-size: 44px 44px;
-      mask-image: linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
-    }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
+        }
 
-    main {
-      width: min(92vw, 900px);
-      padding: clamp(2rem, 8vw, 5rem);
-      position: relative;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--glass);
-      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.42);
-      backdrop-filter: blur(24px);
-      text-align: center;
-    }
+        main {
+            width: min(92vw, 900px);
+            padding: clamp(2rem, 8vw, 5rem);
+            position: relative;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--glass);
+            box-shadow: 0 32px 90px rgba(0, 0, 0, 0.42);
+            backdrop-filter: blur(24px);
+            text-align: center;
+        }
 
-    .spark {
-      width: 72px;
-      height: 72px;
-      margin: 0 auto 1.5rem;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      border-radius: 50%;
-      background:
-        conic-gradient(from 220deg, var(--teal), var(--gold), var(--rose), var(--teal));
-      box-shadow: 0 0 34px rgba(62, 231, 201, 0.36);
-      animation: float 4s ease-in-out infinite;
-    }
+        .spark {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 1.5rem;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 50%;
+            background:
+                conic-gradient(from 220deg, var(--teal), var(--gold), var(--rose), var(--teal));
+            box-shadow: 0 0 34px rgba(62, 231, 201, 0.36);
+            animation: float 4s ease-in-out infinite;
+        }
 
-    .spark::after {
-      content: "";
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--navy);
-      box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.92);
-    }
+        .spark::after {
+            content: "";
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--navy);
+            box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.92);
+        }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 11vw, 7.8rem);
-      line-height: 0.92;
-      font-weight: 900;
-      letter-spacing: 0;
-    }
+        h1 {
+            margin: 0;
+            font-size: clamp(3rem, 11vw, 7.8rem);
+            line-height: 0.92;
+            font-weight: 900;
+            letter-spacing: 0;
+        }
 
-    h1 span {
-      display: block;
-      color: transparent;
-      background: linear-gradient(90deg, var(--teal), var(--gold), var(--rose));
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
+        h1 span {
+            display: block;
+            color: transparent;
+            background: linear-gradient(90deg, var(--teal), var(--gold), var(--rose));
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
 
-    p {
-      max-width: 34rem;
-      margin: 1.35rem auto 0;
-      color: var(--muted);
-      font-size: clamp(1rem, 2.4vw, 1.25rem);
-      line-height: 1.7;
-    }
+        p {
+            max-width: 34rem;
+            margin: 1.35rem auto 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 2.4vw, 1.25rem);
+            line-height: 1.7;
+        }
 
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.9rem;
-      margin-top: 2.2rem;
-    }
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.9rem;
+            margin-top: 2.2rem;
+        }
 
-    a {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.85rem 1.2rem;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 8px;
-      color: var(--ink);
-      text-decoration: none;
-      font-weight: 800;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
+        a {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 8px;
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 800;
+            transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+        }
 
-    a:first-child {
-      background: var(--ink);
-      color: #101522;
-    }
+        a:first-child {
+            background: var(--ink);
+            color: #101522;
+        }
 
-    a:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255, 255, 255, 0.48);
-      background: rgba(255, 255, 255, 0.11);
-    }
+        a:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.48);
+            background: rgba(255, 255, 255, 0.11);
+        }
 
-    a:first-child:hover {
-      background: #ffffff;
-    }
+        a:first-child:hover {
+            background: #ffffff;
+        }
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
+        @keyframes float {
 
-      50% {
-        transform: translateY(-10px);
-      }
-    }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-    @media (max-width: 560px) {
-      body {
-        overflow: auto;
-      }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-      main {
-        margin: 1rem;
-      }
+        @media (max-width: 560px) {
+            body {
+                overflow: auto;
+            }
 
-      .actions {
-        flex-direction: column;
-      }
-    }
-  </style>
+            main {
+                margin: 1rem;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <main>
-    <div class="spark" aria-hidden="true"></div>
-    <h1>Hello <span>World</span></h1>
-    <p>A tiny page with a little sparkle: glass, glow, motion, and one cheerful greeting from this folder.</p>
-    <div class="actions" aria-label="Page actions">
-      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer">Explore HTML</a>
-      <a href="#top" onclick="window.location.reload(); return false;">Replay Glow</a>
-    </div>
-  </main>
+    <main>
+        <div class="spark" aria-hidden="true"></div>
+        <h1>Hello <span>Africa</span></h1>
+        <p>A tiny page with a little sparkle: glass, glow, motion, and one cheerful greeting from this folder.</p>
+        <div class="actions" aria-label="Page actions">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer">Explore
+                HTML</a>
+            <a href="#top" onclick="window.location.reload(); return false;">Replay Glow</a>
+        </div>
+    </main>
 </body>
+
 </html>
